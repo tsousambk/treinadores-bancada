@@ -4142,7 +4142,7 @@
             
             // If still no week found, show empty state with NEXT friday date
             if (!latestWeek || !latestWeek.bets || latestWeek.bets.length === 0) {
-                const nextFridayDate = formatFridayDate(nextFriday);
+                const nextFriday = getNextFriday();
                 const dd2 = String(nextFriday.getDate()).padStart(2, '0');
                 const mm2 = String(nextFriday.getMonth() + 1).padStart(2, '0');
                 const yyyy2 = nextFriday.getFullYear();
